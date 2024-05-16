@@ -21,3 +21,14 @@ const response= await axios.get(`http://localhost:5000/getuser/${id}`)
 export const delUser=async(id)=>{
     const response =await axios.delete(`http://localhost:5000/deluser/${id}`)
 }
+
+export const register=async(data)=>{
+  const response= await axios.post(`http://localhost:5000/reg`,data)
+  return response
+}
+
+
+export const login =async(data)=>{
+const response =await axios.post(`http://localhost:5000/log`,data)
+return response
+}
