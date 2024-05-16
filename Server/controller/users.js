@@ -1,5 +1,9 @@
 const User=require('../modals/usermodal')
 const { get } = require('../routes/users')
+
+
+
+
 const addUser=async(req,res)=>{
 try {
 const {name,sirname,contact,address}=req.body
@@ -32,22 +36,19 @@ res.status(500).json({
 }
 const allUser=async(req,res)=>{
 try {
-
 const alldata= await User.find()
 console.log(alldata)
 res.status(200).json({
-    status:true,
-    msg:"All data get sucessfully",
-    data:alldata
+status:true,
+msg:"All data get sucessfully",
+data:alldata
 })
 } catch (error) {
 console.log(error)
 res.status(500).json({
  status:false,
 msg:error
-    })  
-}
-}
+})}}
 const editUser=async(req,res)=>{
 try {
   const id=req.params.id
@@ -110,9 +111,9 @@ msg:error
 
 
 module.exports={
-    addUser,
-    allUser,
-    editUser,
-    delUser,
-    getUser
+addUser,
+ allUser,
+editUser,
+delUser,
+getUser
 }
