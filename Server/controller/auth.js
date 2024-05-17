@@ -20,20 +20,18 @@ try {
             password:protectedPassword
         })
     
-    await newUser.save()
+await newUser.save()
     res.status(200).json({
         status:true,
         msg:"User registration is ssucessfull"
-    })
-     
+    })   
 } catch (error) {
     console.log(error)
     res.status(500).json({
     status:false,
     msg:error
     })
-}
-}  
+}}  
 const login=async(req,res)=>{
 const {email,password}=req.body
 if(!email ||!password){

@@ -1,9 +1,5 @@
 const User=require('../modals/usermodal')
 const { get } = require('../routes/users')
-
-
-
-
 const addUser=async(req,res)=>{
 try {
 const {name,sirname,contact,address}=req.body
@@ -72,7 +68,6 @@ res.status(500).json({
 })
     }
 }
-
 const  delUser=async(req,res)=>{
     try {
  const id=req.params.id
@@ -90,7 +85,6 @@ res.status(500).json({
 })
     }
 }
-
 const getUser=async(req,res)=>{
 try {
    const id=req.params.id
