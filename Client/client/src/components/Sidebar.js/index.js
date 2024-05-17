@@ -15,7 +15,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Adduser from '../Adduser';
 import Alluser from '../Alluser';
-
+import Addocument from '../Adddocument';
 const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {
@@ -75,7 +75,7 @@ User Management Portal          </Typography>
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
-        <Alluser/>
+        <Addocument/>
         <Toolbar />
       </Box>
     </Box>
